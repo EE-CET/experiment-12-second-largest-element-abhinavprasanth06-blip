@@ -1,8 +1,30 @@
+import java.util.Scanner;
+
 public class SecondLargest {
-    
-        // TODO: Read N
-        // TODO: Read array elements
-        // TODO: Find and print the second largest element
-        // Hint: You can do this in a single pass or two passes without sorting.
-    
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        if (n < 2) {        
+            System.out.println(sc.nextInt());
+            return;
+        }
+
+        int max = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            int x = sc.nextInt();
+
+            if (x > max) {
+                second = max;
+                max = x;
+            } else if (x > second) {
+                second = x;
+            }
+        }
+
+        System.out.println(second);
+    }
 }
