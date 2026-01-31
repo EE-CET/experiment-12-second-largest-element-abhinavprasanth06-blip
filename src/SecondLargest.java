@@ -13,36 +13,32 @@ public class LargestTwice {
             System.out.print("enter the elmt");
             arr[i] = sc.nextInt();
         }
+        
 	max = arr[0];
 	for(int i =0;i<size;i++){
             if(arr[i]>max){
-		System.out.print("???");
-		System.out.println(max);
-		System.out.println(arr[i]);
-                max = arr[i]; 
-		
-		System.out.println(max);
+		//System.out.print("???");
+		//System.out.println(max);
+		//System.out.println(arr[i]);
+        max = arr[i];
+	//	
 		temp = i; 
 	     }
 		 	
-	}	
+	}
+	max = arr[0];
 	for(int i =0;i<size;i++){
-        if(2*arr[i]<=max){
-		System.out.print("++");
-                flag = 1;   	
+        if(i == temp){
+            System.out.println(temp);
+			continue;	
 	    }
-		else if(size == 1){
-			
-			System.out.print(1);
+		else if(arr[i]>max) {
+	//	System.out.println(max);
+		//System.out.println(arr[i]);
+        max = arr[i];
+		
 		}
-	    else{
-		System.out.print(-1);
-		flag =0;
-		break;
-	    }
 	}
-	if(flag==1){
-		System.out.print(temp);
-	}
+	System.out.println(max);
    }
 }
