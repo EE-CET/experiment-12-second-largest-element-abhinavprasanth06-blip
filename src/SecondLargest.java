@@ -15,7 +15,7 @@ public class SecondLargest {
             if (x > max) {
                 second = max;
                 max = x;
-            } else if (x > second && x < max) {
+            } else if (x > second) {   // ⭐ NO x < max condition
                 second = x;
             }
         }
