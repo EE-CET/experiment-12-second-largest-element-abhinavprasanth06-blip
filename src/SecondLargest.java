@@ -6,6 +6,11 @@ public class SecondLargest {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
+        if (n < 2) {        
+            System.out.println(sc.nextInt());
+            return;
+        }
+
         int max = Integer.MIN_VALUE;
         int second = Integer.MIN_VALUE;
 
@@ -15,7 +20,7 @@ public class SecondLargest {
             if (x > max) {
                 second = max;
                 max = x;
-            } else if (x > second) {   // ⭐ NO x < max condition
+            } else if (x > second) {
                 second = x;
             }
         }
