@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class LargestTwice {
+public class SecondLargest {
    public static void main(String[] args){
 	System.out.print("enter the size");
 	Scanner sc = new Scanner(System.in);
